@@ -1,6 +1,15 @@
-<html>
-<body>
-    <p>Liberty Bell Judo</p>
-    <p>Tournament Registration</p>
-</body>
-</html>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+{% extends 'registration/base.html' %}
+
+{% block content %}
+    {% for post in registration %}
+        <div class="firstName">
+            <div class="lastName">
+                {{ post.published_date }}
+            </div>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
