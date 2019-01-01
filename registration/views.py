@@ -13,7 +13,7 @@ def post_new(request):
         if form.is_valid():
             post = form.save(commit=False)
             post.save()
-            return render(request, 'registration/post_edit.html', {'form': form})
+            return render(request, 'registration/registration_success.html', {'form': form})
             ##print success 
     else:
         form = PostForm()

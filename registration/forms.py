@@ -6,4 +6,4 @@ class PostForm(forms.ModelForm):
 
     class Meta:
         model = Registration
-        fields = ('firstName', 'lastName',)
+        fields = ('firstName', 'lastName', 'age', 'weight', 'rank')
